@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayour Restaurant - Order & Pay</title>
+    <link rel="stylesheet" href="mayour.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Flutterwave Inline Script -->
+    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mayour Restaurant</h1>
+            <p class="tagline">Taste the Excellence • Delivered Fresh</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Menu Items (same as before) -->
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Jollof+Rice" alt="Jollof Rice">
+                    <h3>Jollof Rice & Chicken</h3>
+                    <p class="description">Spicy Nigerian jollof rice served with fried chicken and plantain</p>
+                    <div class="price">₦3,500</div>
+                    <button class="add-to-cart" data-name="Jollof Rice & Chicken" data-price="3500">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Egusi+Soup" alt="Egusi Soup">
+                    <h3>Egusi Soup with Pounded Yam</h3>
+                    <p class="description">Rich melon seed soup with assorted meat</p>
+                    <div class="price">₦4,200</div>
+                    <button class="add-to-cart" data-name="Egusi Soup with Pounded Yam" data-price="4200">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Pepper+Soup" alt="Pepper Soup">
+                    <h3>Goat Meat Pepper Soup</h3>
+                    <p class="description">Hot and spicy pepper soup</p>
+                    <div class="price">₦3,000</div>
+                    <button class="add-to-cart" data-name="Goat Meat Pepper Soup" data-price="3000">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Suya" alt="Suya">
+                    <h3>Beef Suya (Full Stick)</h3>
+                    <p class="description">Spicy grilled beef skewers</p>
+                    <div class="price">₦2,800</div>
+                    <button class="add-to-cart" data-name="Beef Suya" data-price="2800">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Fried+Rice" alt="Fried Rice">
+                    <h3>Fried Rice with Turkey</h3>
+                    <p class="description">Nigerian fried rice with grilled turkey</p>
+                    <div class="price">₦3,800</div>
+                    <button class="add-to-cart" data-name="Fried Rice with Turkey" data-price="3800">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/300x200?text=Chapman" alt="Chapman">
+                    <h3>Chapman Cocktail</h3>
+                    <p class="description">Refreshing Nigerian mocktail</p>
+                    <div class="price">₦1,500</div>
+                    <button class="add-to-cart" data-name="Chapman Cocktail" data-price="1500">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart & Checkout Section -->
+        <section class="cart-section">
+            <h2>Your Order Summary (<span id="cart-count">0</span> items)</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Subtotal: ₦<span id="cart-total">0</span></strong>
+                <p style="margin-top:10px; color:#b8860b;">Delivery Fee: ₦800 (within Lagos)</p>
+                <strong style="font-size:1.4rem; color:#228B22;">Total: ₦<span id="final-total">800</span></strong>
+            </div>
+
+            <!-- Delivery Form -->
+            <div class="delivery-form" style="margin-top:30px;">
+                <h3>Delivery Details</h3>
+                <input type="text" id="customer-name" placeholder="Full Name" required>
+                <input type="tel" id="customer-phone" placeholder="Phone Number (e.g. 09012345678)" required>
+                <input type="text" id="customer-address" placeholder="Delivery Address (with area)" required>
+            </div>
+
+            <button id="pay-btn" disabled>Pay with Flutterwave</button>
+            <p style="font-size:0.9rem; margin-top:10px; color:#666;">
+                Powered by <strong>Flutterwave</strong> • Secure Payment
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mayour Restaurant • Lagos, Nigeria</p>
+            <p>Call/WhatsApp: 0901 234 5678</p>
+        </div>
+    </footer>
+
+    <script src="mayour.js"></script>
+</body>
+</html>
