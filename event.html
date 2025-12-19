@@ -1,0 +1,60 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor Restaurant Event Booking</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mayor Restaurant Event Booking</h1>
+        <p>Book your special event with us! We handle marriages, naming ceremonies, graduations, and more.</p>
+        
+        <form id="bookingForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType" required>
+                <option value="">Select an event</option>
+                <option value="marriage">Marriage</option>
+                <option value="naming">Naming Ceremony</option>
+                <option value="graduation">Graduation</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="otherEvent">Other Event (if selected):</label>
+            <input type="text" id="otherEvent" name="otherEvent" style="display: none;">
+            
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Event Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+            
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests"></textarea>
+            
+            <button type="submit">Submit Booking</button>
+        </form>
+        
+        <div id="confirmation" style="display: none;">
+            <h2>Booking Confirmed!</h2>
+            <p>Thank you for booking with Mayor Restaurant. We will contact you shortly.</p>
+        </div>
+    </div>
+    
+    <script src="event.js"></script>
+</body>
+</html>
