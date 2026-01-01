@@ -6,7 +6,9 @@
 }
 
 :root{
-  --white: #fff,
+  --white: #fff;
+  --bg-color: #b8860b;
+  --row-card: #b58787;
 }
 
 .home{
@@ -37,7 +39,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: maroon;
+  background: var(--bg-color);
 }
 
 .home{
@@ -87,9 +89,28 @@ nav ul li:hover::after{
 
 }
 
+/* animation @ keyframe */
+@keyframes Framework{
+ 0% {
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.3;
+  }
+  75%{
+    opacity: 0.6;
+  }
+ 100% {
+    opacity: 0.9;
+  }
+}
+
 .content{
+  animation-name: Framework;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   color: white;
   transform: translateX(-50%);
@@ -100,17 +121,20 @@ nav ul li:hover::after{
 }
 
 .content h1{
+  font-family: 'Playfair Display', sans-serif;
   font-size: 35px;
 }
 
 .content p{
+  font-family: 'poppins';
   font-size: 24px;
   text-align: center;
 }
 
 .content a{
   padding: 12px 25px;
-  background: maroon;
+  margin-top: 20px;
+  background: var(--bg-color);
   text-decoration: none;
   border-radius: 8px;
   outline: 0;
@@ -130,6 +154,15 @@ nav ul li:hover::after{
 
 .about h1{
   text-align: center;
+  color: var(--bg-color);
+}
+
+/* for more about info */
+.btn-sm{
+  background: var(--bg-color);
+  padding: 8px 5px;
+  border: none;
+  border-radius: 4px;
 }
 
 .more{
@@ -147,6 +180,11 @@ nav ul li:hover::after{
   font-family: Roboto;
   font-size: 24px;
   font-weight: 100;
+  margin: 15px 0;
+}
+
+.more{
+  cursor: pointer;
 }
 
 .dine{
@@ -155,10 +193,11 @@ nav ul li:hover::after{
   background-size: cover;
   height: 60vh;
   flex-basis: 44%;
+  border-radius: 8px;
 }
 
 .service{
-  background: maroon;
+  background: var(--bg-color);
   padding: 50px 5%;
   margin: 0 auto; 
 }
@@ -185,12 +224,14 @@ nav ul li:hover::after{
 }
 
 .card h2 p{
-  color: #000;
+  color: var(--bg-color);
 }
 
 .card img{
-  width: 45px;
-  border-radius: 50%;
+  margin: 20px 0;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
 }
 
 .testimonial {
@@ -215,7 +256,8 @@ nav ul li:hover::after{
   flex-basis: 44%;
   text-align: left;
   gap: 25px;
-  background-color: #b58787;
+  color: var(--white);
+  background-color: var(--bg-color);
   padding: 25px 20px;
   border-radius: 8px;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -237,18 +279,29 @@ nav ul li:hover::after{
 }
 
 .fa{
-  color: maroon;
+  color: var(--white);
 }
 
 .fa-facebook-official, .fa-twitter, .fa-instagram{
   color: #fff;
-  background: maroon;
+  background: var(--bg-color);
   margin-left: 10px;
+}
+
+/* cta button design */
+.btn-cta{
+  width: 250px;
+  border-radius: 8px;
+  outline: 0;
+  border: none;
+  opacity: 1;
+  color: var(--white);
+  padding: 12px 8px;
 }
 
 .fa-paper-plane{
   color: #fff;
-  background: maroon;
+  background: var(--bg-color);
   margin-right: 10px;
 }
 
@@ -304,7 +357,7 @@ nav ul li:hover::after{
 
 .btn{
   padding: 12px 25px;
-  background: maroon;
+  background: var(--bg-color);
   border-radius: 8px;
   outline: 0;
   margin-top: 20px;
@@ -320,13 +373,14 @@ nav ul li:hover::after{
 .cta-content{
   width: 60%;
   margin: auto;
-  background: url('./image/rice.jpeg');
+  background: url(image/cta1.jpeg);
+  opacity: 0.7;
   background-size: cover;
   background-position: center;
   position: relative;
   width: 100%;
   height: 60vh;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .cta-content button{
@@ -336,23 +390,24 @@ nav ul li:hover::after{
   padding: 12px 8px;
   transform: translate(-50%, -50%);
   width: 100px;
+  background: var(--bg-color);
 }
 
 .cta-content button:hover{
   background: transparent;
-  border:1px solid maroon ;
+  border:1px solid var(--bg-color) ;
 }
 
 .footer{
   margin-top: 35px;
-  background: maroon;
+  background: var(--bg-color);
   color: #fff;
   text-align: center;
 }
 /* linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8), url('./image/rice.jpeg')); */
 
 .fa-heart{
-  color: #b58787;
+  color: var(--white);
 }
 
 .social-media{
@@ -418,10 +473,10 @@ nav ul li:hover::after{
 nav ul{
   position: absolute;
   top: 0;
-  right: 0;
+  right: -300px;
   width: 300px;
   height: 100vh;
-  background: #8e4d4d;
+  background: var(--bg-color);
   display: block;
   transition: all 0.3s;
 }

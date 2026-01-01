@@ -1,7 +1,7 @@
 /* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1600x600?text=Mayour+Restaurant') center/cover no-repeat;
     margin: 0;
     padding: 0;
     display: flex;
@@ -50,7 +50,7 @@ input, select, textarea {
 button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #b8860b;;
     color: white;
     border: none;
     border-radius: 4px;
@@ -59,7 +59,8 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #9f7305;
+    transform: translateY(-3px);
 }
 
 #confirmation {

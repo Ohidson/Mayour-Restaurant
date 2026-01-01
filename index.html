@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
+  <!-- The Navigation -->
   <nav class="container">
     <div><a href="" class="home">Home</a></div>
     <ul id="menu_list">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Booking</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#cta">Booking</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
       <i class="fa fa-times" id="close_tab"></i>
     </ul>
     <i class="fa fa-bars" id="bars"></i>
@@ -27,12 +29,15 @@
       <a href="mayour/mayour.html">Place Order</a>
     </div>
   </div>  
-  <div class="about container">
+  <div class="about container" id="about-us">
     <h1>About Mayor</h1>
     <div class="more">
       <div class="text">
-        <p>Mayor Restaurant, opened in 2025, invites you to savor exquisite dishes crafted with fresh, local ingredients. Our cozy ambiance and passion for culinary excellence make every meal a memorable experience.
-        </p>
+        <p>Mayour Restaurant was founded with a vision to bring authentic, flavorful cuisine to our community. Inspired by rich culinary traditions, we blend fresh ingredients with time-honored recipes to create dishes that delight the senses.<p class="more">
+  For more details, <button class="btn-sm"><a href="about.html">click...</a></button>
+</p>
+        
+        
       </div>
       <div class="dine">
         
@@ -40,25 +45,25 @@
     </div>
   </div>
   <!-- Our services -->
-  <div class="service">
+  <div class="service" id="services">
     <h1>Our Services</h1>
     <div class="service_offer">
       <div class="card">
       <h2>catering</h2>
-      <img src="image/logo.jpeg" alt="">
+      <img src="image/catering.jpeg">
       <p>My catering service delivers delicious, customized meals for any event, using fresh ingredients and creative recipes to delight guests, with professional staff ensuring a seamless, memorable dining experience tailored to your needs.
       </p>
     </div>
     <div class="card">
-      <h2>catering</h2>
-      <img src="image/logo.jpeg" alt="">
+      <h2>At wedding</h2>
+      <img src="image/wedding.jpeg">
       <p>My catering service delivers delicious, customized meals for any event, using fresh ingredients and creative recipes to delight guests, with professional staff ensuring a seamless, memorable dining experience tailored to your needs.
       </p>
       
     </div>
     <div class="card">
-      <h2>catering</h2>
-      <img src="image/logo.jpeg" alt="">
+      <h2>Take-away</h2>
+      <img src="image/eatry.jpg" alt="">
       <p>My catering service delivers delicious, customized meals for any event, using fresh ingredients and creative recipes to delight guests, with professional staff ensuring a seamless, memorable dining experience tailored to your needs.
 </p>
     </div>
@@ -105,9 +110,9 @@
     </div>
   </section>
   <!-- Call to action -->
-  <section class="container cta">
+  <section class="container cta" id="cta">
     <div class="cta-content">
-      <a href="event.html"><button class="btn">BOOKING</button></a>
+      <a href="event.html"><button class="btn-cta">Order Online</button></a>
     </div>
   </section>
   <!-- Contact form -->
